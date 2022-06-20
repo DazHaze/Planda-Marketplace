@@ -2,90 +2,196 @@
 
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
 
     {% block meta %}
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     {% endblock %}
 
     {% block extra_meta %}
     {% endblock %}
 
     {% block corecss %}
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
-        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
 
     {% block extra_css %}
     {% endblock %}
 
     {% block corejs %}
-        <script src="https://kit.fontawesome.com/e9c73d7092.js" crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/e9c73d7092.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
     {% endblock %}
 
     {% block extra_js %}
     {% endblock %}
 
     <title>Boutique Ado {% block extra_title %}{% endblock %}</title>
-  </head>
-  <body>
-   <header>
+</head>
+
+<body>
     <header>
-        <nav class="navbar main-nav navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand flex-grow-1" href="#">Planda</a>
-            <div class="flex-grow-1 d-flex">
-                <form class="form-inline flex-nowrap bg-light mx-0 mx-lg-auto rounded p-1">
-                    <input class="form-control mr-sm-2 main-search" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn main-search-btn" type="submit">Search</button>
-                </form>
-            </div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav ml-auto">
-                    <a class="nav-item nav-link" href="#">Login</a>
-                    <a class="nav-item nav-link" href="#">Register</a>
-                    <a class="nav-item nav-link" href="#"><i class="fas fa-shopping-cart"></i></a>
+        <header>
+            <nav class="navbar main-nav navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand flex-grow-1 logo-font" href="#">Planda</a>
+                <div class="flex-grow-1 d-flex">
+                    <form class="form-inline flex-nowrap bg-light mx-0 mx-lg-auto rounded p-1">
+                        <input class="form-control mr-sm-2 main-search" type="search" placeholder="Search"
+                            aria-label="Search">
+                        <button class="btn main-search-btn" type="submit">Search</button>
+                    </form>
                 </div>
-            </div>
-        </nav>
-        <div class="row bg-white">
-            <nav class="navbar secondary-nav navbar-expand-lg navbar-light w-100">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                {% include 'includes/main-nav.html' %}
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ml-auto">
+                        <a class="nav-item nav-link" href="#">Login</a>
+                        <a class="nav-item nav-link" href="#">Register</a>
+                        <a class="nav-item nav-link" href="#"><i class="fas fa-shopping-cart"></i></a>
+                    </div>
+                </div>
             </nav>
-        </div>
-        <div id="delivery-banner" class="row text-center">
-            <div class="col bg-black text-white">
-                <h4 class="logo-font my-1">Free Delivery All This Month! <i class="fas fa-truck"></i>Free Delivery All This Month! <i class="fas fa-truck"></i>Free Delivery All This Month! <i class="fas fa-truck"></i></h4>                
-            </div>            
-        </div>
-      
-      
-    </header>
+            <div class="row bg-white">
+                <nav class="navbar secondary-nav navbar-expand-lg navbar-light w-100">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
+                        aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    {% include 'includes/main-nav.html' %}
+                </nav>
+            </div>
+            <div id="delivery-banner" class="row text-center">
+                <div class="col bg-black text-white">
+                    <h4 class="logo-font my-1">Free Delivery All This Month! <i class="fas fa-truck"></i>Free Delivery
+                        All This Month! <i class="fas fa-truck"></i>Free Delivery All This Month! <i
+                            class="fas fa-truck"></i></h4>
+                </div>
+            </div>
 
-    {% if messages %}
+
+        </header>
+
+
+        {% if messages %}
         <div class="message-container"></div>
-    {% endif %}
+        {% endif %}
 
-    {% block page_header %}
-    {% endblock %}
+        {% block page_header %}
+        {% endblock %}
 
-    {% block content %}
-    {% endblock %}
+        {% block content %}
+        {% endblock %}
 
-    {% block postloadjs %}
-    {% endblock %}
+        <!-- Footer -->
+        <footer class="text-center text-white">
+            <!-- Grid container -->
+            <div class="container p-4">
+                <!-- Section: Social media -->
+                <section class="mb-4">
+                    <!-- Facebook -->
+                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                            class="fab fa-facebook-f"></i></a>
 
-    
-  </body>
+                    <!-- Twitter -->
+                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                            class="fab fa-twitter"></i></a>
+
+                    <!-- Google -->
+                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                            class="fab fa-google"></i></a>
+
+                    <!-- Instagram -->
+                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                            class="fab fa-instagram"></i></a>
+
+                    <!-- Linkedin -->
+                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                            class="fab fa-linkedin-in"></i></a>
+
+                    <!-- Github -->
+                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                            class="fab fa-github"></i></a>
+                </section>
+                <!-- Section: Social media -->
+
+                <!-- Section: Form -->
+                <section class="">
+                    <form action="">
+                        <!--Grid row-->
+                        <div class="row d-flex justify-content-center">
+                            <!--Grid column-->
+                            <div class="col-auto">
+                                <p class="pt-2">
+                                    <strong>Sign up for our newsletter</strong>
+                                </p>
+                            </div>
+                            <!--Grid column-->
+
+                            <!--Grid column-->
+                            <div class="col-md-5 col-12">
+                                <!-- Email input -->
+                                <div class="form-outline form-white mb-4">
+                                    <input type="email" id="form5Example21" class="form-control"
+                                        placeholder="Email Address" />
+                                </div>
+                            </div>
+                            <!--Grid column-->
+
+                            <!--Grid column-->
+                            <div class="col-auto">
+                                <!-- Submit button -->
+                                <button type="submit" class="btn subscribe-btn mb-4">
+                                    Subscribe
+                                </button>
+                            </div>
+                            <!--Grid column-->
+                        </div>
+                        <!--Grid row-->
+                    </form>
+                </section>
+                <!-- Section: Form -->
+
+                <!-- Section: Text -->
+                <section class="mb-4">
+                    <p>
+                        Planda is a webshop for sustainably sourced plants and organic material. All of our plants are
+                        grown with natural products and great care. Equipment sold here is from independant and local
+                        suppliers. If any plant is damaged on arrival our customer care team will walk you through the
+                        steps to take. Have a good day!
+                    </p>
+                </section>
+            </div>
+            <!-- Grid container -->
+
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                © 2022 Copyright:
+                <a class="text-white" href="https://mdbootstrap.com/">Darragh Hayes</a>
+            </div>
+            <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
+
+        {% block postloadjs %}
+        {% endblock %}
+
+
+</body>
+
 </html>

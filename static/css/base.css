@@ -6,12 +6,46 @@
 }
 
 body {
-    background: url('/media/plant.png') no-repeat center center fixed;
+    background: url('/media/plant.png') no-repeat center right 10% fixed;
     background-size:contain;
     background-color: var(--main-pink);
     height: calc(100vh - 164px);
     color: white;
     font-family: 'Lato';
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+footer{
+    margin-top: 10rem;
+    background-color: var(--main-green) !important;
+}
+
+.subscribe-btn{
+    background-color: var(--dark-secondary-pink);
+    border-radius: 0.5rem !important;
+    padding: 0.5rem 2rem !important;
+    color: white;
+}
+
+strong{
+    font-weight: 1000;
+    text-transform: uppercase;
+}
+
+.shop-now-button{
+    background-color: var(--dark-secondary-pink);
+    border-radius: 0.5rem !important;
+    padding: 1rem 4rem !important;
+    color: white;
+}
+
+.new-arrivals-button{
+    background-color: transparent;
+    border-radius: 0.5rem !important;
+    padding: 0.8rem 3.8rem !important;
+    color: white;
+    border: 0.2rem white solid;
 }
 
 
