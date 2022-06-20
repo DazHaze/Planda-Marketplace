@@ -6,9 +6,9 @@
 }
 
 body {
-    background: url('/media/homepage_background_cropped.jpg') no-repeat center center fixed;
-    /* background-color: var(--main-pink); */
-    background-size: cover;
+    background: url('/media/plant.png') no-repeat center center fixed;
+    background-size:contain;
+    background-color: var(--main-pink);
     height: calc(100vh - 164px);
     color: white;
     font-family: 'Lato';
