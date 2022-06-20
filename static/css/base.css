@@ -16,6 +16,16 @@ body {
     min-height: 100vh;
 }
 
+.overlay{
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: white;
+    z-index: -1;
+}
+
 footer{
     margin-top: 10rem;
     background-color: var(--main-green) !important;
@@ -91,6 +101,11 @@ strong{
     background-color: var(--main-green);
     overflow: hidden;
     white-space: nowrap;
+}
+
+#delivery-banner h4{
+    font-size: 1rem;
+    padding: 0.5rem 0 !important;
 }
 
 .fa-truck{
