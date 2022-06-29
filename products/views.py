@@ -5,6 +5,7 @@ from django.db.models import Q
 from .models import Product, Category
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
+from django.db.models.functions import Lower
 # Create your views here.
 
 def all_products(request):

@@ -31,9 +31,25 @@ a.category-badge > span.badge:hover{
     color: #fff !important;
 }
 
+.btt-button{
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.btt-link{
+    cursor: pointer;
+}
+
 footer{
     margin-top: 10rem;
     background-color: var(--main-green) !important;
+}
+
+.text-black{
+    color: black;
 }
 
 .subscribe-btn{
