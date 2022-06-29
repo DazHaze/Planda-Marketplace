@@ -10,7 +10,7 @@ body {
     background-size:contain;
     background-color: var(--main-pink);
     height: calc(100vh - 164px);
-    color: white;
+    color: black;
     font-family: 'Lato';
     overflow-x: hidden;
     min-height: 100vh;
@@ -77,6 +77,12 @@ strong{
     padding: 0.8rem 3.8rem !important;
     color: white;
     border: 0.2rem white solid;
+}
+
+.btn-outline-black{
+    background: white;
+    color: black !important;
+    border: 2px solid black !important;
 }
 
 
