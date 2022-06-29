@@ -22,10 +22,10 @@
             <div class="product-container col-10 offset-1">
                 <div class="row mt-1 mb-2"></div>
                 <div class="row">
-                    {% for product in products %}
+                    {% for item in items %}
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                             <div class="card h-100 border-0 position-relative" >
-                                {% if product.on_sale == True%}
+                                {% if item.on_sale == True%}
                                 <div class="position-absolute d-flex flex-column justify-content-center" style="
                                 width:5rem;
                                 aspect-ratio: 1/1;
@@ -37,30 +37,30 @@
                                 color: white;
                                 "><h2 class="w-100 text-center" style="">Sale</h2></div>
                                 {% endif %}
-                                {% if product.image %}
-                                <a href="{% url 'product_detail' product.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                {% if item.image %}
+                                <a href="#">
+                                    <img class="card-img-top img-fluid" src="{{ item.image.url }}" alt="{{ item.name }}">
                                 </a>
                                 {% else %}
-                                <a href="{% url 'product_detail' product.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                <a href="#">
+                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.name }}">
                                 </a>
                                 {% endif %}
                                 <div class="card-body pb-0">
-                                    <p class="mb-0 text-dark">{{ product.name }}</p>
+                                    <p class="mb-0 text-dark">{{ item.name }}</p>
                                 </div>
                                 <div class="card-footer bg-white pt-0 border-0 text-left">
                                     <div class="row">
                                         <div class="col">
-                                            <p class="lead mb-0 text-left font-weight-bold text-dark">€{{ product.price }}</p>
-                                            {% if product.rating %}
-                                                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                                            <p class="lead mb-0 text-left font-weight-bold text-dark">€{{ item.price }}</p>
+                                            {% if item.rating %}
+                                                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ item.rating }} / 5</small>
                                             {% else %}
                                                 <small class="text-muted">No Rating</small>
                                             {% endif %}
                                         </div>
                                         <div class="col text-dark text-right">
-                                            <a href="#"><i class="fas fa-heart"></i></a>
+                                            <a href="{% url 'favourite_add' item.id %}"><i class="fas fa-heart"></i></a>
                                         </div>
                                     </div>
                                 </div>

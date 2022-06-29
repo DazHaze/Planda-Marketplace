@@ -1,8 +1,10 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.http import HttpResponseRedirect
 from django.contrib import messages
 from django.db.models import Q
 from .models import Product, Category
-
+from django.contrib.auth.models import User
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 def all_products(request):
@@ -11,11 +13,10 @@ def all_products(request):
     products = Product.objects.all()
     query = None
     categories = None
+    sale_products = Product.objects.filter(on_sale=True)
 
     if request.GET:
         
-
-
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
@@ -30,13 +31,27 @@ def all_products(request):
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
 
+        
+
     context = {
         'products': products,
         'search_term': query,
         'current_categories': categories,
+        'sale_products': sale_products,
     }
 
     return render(request, 'products/products.html', context)
+
+
+def sale_products(request):
+    """ A view to show all sale products """
+    items = Product.objects.filter(on_sale=True)
+
+    context = {'items': items}
+
+    return render(request, 'products/sale_products.html', context)
+
+
 
 
 def product_detail(request, product_id):
@@ -49,3 +64,17 @@ def product_detail(request, product_id):
     }
 
     return render(request, 'products/product_detail.html', context)
+
+@login_required
+def favourite_add(request, favourite_id):
+    """ A view to add a favourite product """
+    fav_product = get_object_or_404(Product, id=favourite_id)
+    if fav_product.favourites.filter(id=request.user.id).exists():
+        fav_product.favourites.remove(request.user)
+    else:
+        fav_product.favourites.add(request.user)
+    context = {
+    'product': fav_product,
+    }
+    return render(request, 'products/product_detail.html', context)
+    # return HttpResponseRedirect(request.META['HTTP_REFERER'])
