@@ -26,6 +26,11 @@ body {
     z-index: -1;
 }
 
+a.category-badge > span.badge:hover{
+    background: #212529;
+    color: #fff !important;
+}
+
 footer{
     margin-top: 10rem;
     background-color: var(--main-green) !important;
