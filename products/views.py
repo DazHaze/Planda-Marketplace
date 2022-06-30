@@ -82,17 +82,3 @@ def product_detail(request, product_id):
     }
 
     return render(request, 'products/product_detail.html', context)
-
-@login_required
-def favourite_add(request, favourite_id):
-    """ A view to add a favourite product """
-    fav_product = get_object_or_404(Product, id=favourite_id)
-    if fav_product.favourites.filter(id=request.user.id).exists():
-        fav_product.favourites.remove(request.user)
-    else:
-        fav_product.favourites.add(request.user)
-    context = {
-    'product': fav_product,
-    }
-    return render(request, 'products/product_detail.html', context)
-    # return HttpResponseRedirect(request.META['HTTP_REFERER'])
