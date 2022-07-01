@@ -11,12 +11,12 @@ from django.db.models.functions import Lower
 def all_products(request):
     """ A view to show all products, including sorting and search queries """
 
-    products = Product.objects.all()
     query = None
     categories = None
     sort = None
     direction = None
-    sale_products = Product.objects.filter(on_sale=True)
+
+    products = Product.objects.all()
 
     if request.GET:
         if 'sort' in request.GET:
@@ -77,8 +77,18 @@ def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
 
+    is_favourite = None
+
+    if product.favourites.filter(id=request.user.id).exists():
+        print('heart')
+        is_favourite = True
+    else:
+        is_favourite = False
+        print('no heart')
+
     context = {
         'product': product,
+        'is_favourite': is_favourite,
     }
 
     return render(request, 'products/product_detail.html', context)

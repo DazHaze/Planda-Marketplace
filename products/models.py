@@ -32,7 +32,7 @@ class Product(models.Model):
     image = models.ImageField(null=True, blank=True)
     on_sale = models.BooleanField(default=False)
     favourites = models.ManyToManyField(
-        User, related_name='favourite', default=None, blank=True)
+        User, related_name='favourites', default=False, blank=True)
 
     def __str__(self):
         return self.name

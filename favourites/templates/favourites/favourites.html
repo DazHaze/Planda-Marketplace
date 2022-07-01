@@ -41,12 +41,12 @@
                             {% if search_term or current_categories or current_sorting != 'None_None' %}
                                 <span class="small"><a href="{% url 'products' %}">Products Home</a> | </span>
                             {% endif %}
-                            {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+                            {{ favourite_products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
                         </p>
                     </div>
                 </div>
                 <div class="row">
-                    {% for product in products %}
+                    {% for product in favourite_products %}
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                             <div class="card h-100 border-0 position-relative" >
                                 {% if product.on_sale == True%}
@@ -87,9 +87,6 @@
                                             {% else %}
                                                 <small class="text-muted">No Rating</small>
                                             {% endif %}
-                                        </div>
-                                        <div class="col text-dark text-right">
-                                            <a href="#"><i class="fas fa-heart"></i></a>
                                         </div>
                                     </div>
                                 </div>
