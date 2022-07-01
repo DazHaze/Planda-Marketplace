@@ -60,7 +60,7 @@
                                 border-radius: 50%;
                                 color: white;
                                 "><h2 class="w-100 text-center" style="">Sale</h2></div>
-                                {% endif %}
+                                {% endif %}              
                                 {% if product.image %}
                                 <a href="{% url 'product_detail' product.id %}">
                                     <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
@@ -87,6 +87,7 @@
                                             {% else %}
                                                 <small class="text-muted">No Rating</small>
                                             {% endif %}
+                                            <a class="remove-item text-danger float-right m-3" href="{% url 'favourite_product' id=product.id %}"><small>Remove</small></a>
                                         </div>
                                     </div>
                                 </div>
