@@ -11,6 +11,16 @@
   transition: box-shadow 150ms ease;
 }
 
+select,
+select option{
+  color: #000000;
+}
+
+select:invalid,
+select option[value=""]{
+  color: #aab7c4 !important;
+}
+
 .StripeElement--focus,
 .stripe-style-input:focus,
 .stripe-style-input:active {
