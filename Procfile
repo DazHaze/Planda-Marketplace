@@ -1,0 +1,1 @@
+web: gunicorn planda_webshop.wsgi:application
