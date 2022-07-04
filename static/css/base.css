@@ -77,6 +77,8 @@ strong{
     color: white;
 }
 
+@media screen and (max-width: 768px) { .home-buttons {flex-direction: column;} }
+
 .new-arrivals-button{
     background-color: transparent;
     border-radius: 0.5rem !important;
