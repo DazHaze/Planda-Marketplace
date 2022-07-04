@@ -17,10 +17,10 @@
                 Outdoor
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a href="#" class="dropdown-item">Activewear &amp; Essentials</a>
-                <a href="{% url 'products' %}?category=jeans" class="dropdown-item">Jeans</a>
-                <a href="#" class="dropdown-item">Shirts</a>
-                <a href="#" class="dropdown-item">All Clothing</a>
+                <a href="#" class="dropdown-item">Small Plants</a>
+                <a href="{% url 'products' %}?category=jeans" class="dropdown-item">Shrubs</a>
+                <a href="#" class="dropdown-item">Trees</a>
+                <a href="#" class="dropdown-item">All Outdoor</a>
             </div>
         </li>
 
@@ -29,22 +29,16 @@
                 Equipment
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
-                <a href="#" class="dropdown-item">Bed &amp; Bath</a>
-                <a href="#" class="dropdown-item">Kitchen &amp; Dining</a>
-                <a href="#" class="dropdown-item">All Homeware</a>
+                <a href="#" class="dropdown-item">Tools</a>
+                <a href="#" class="dropdown-item">Pots</a>
+                <a href="#" class="dropdown-item">All Equipment</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-white sale-nav-heading secondary-nav-heading" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-white sale-nav-heading secondary-nav-heading" href="{% url 'sale_products' %}" id="specials-link" aria-haspopup="true" aria-expanded="false">
                 Sale
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="#" class="dropdown-item">Indoors</a>
-                <a href="#" class="dropdown-item">Outdoor</a>
-                <a href="#" class="dropdown-item">Equipment</a>
-                <a href="{% url 'sale_products' %}" class="dropdown-item">All Sale Items</a>
-            </div>
         </li>
     </ul>
 </div>
