@@ -38,11 +38,11 @@
                                 "><h2 class="w-100 text-center" style="">Sale</h2></div>
                                 {% endif %}
                                 {% if item.image %}
-                                <a href="#">
+                                <a href="{% url 'product_detail' product.id %}">
                                     <img class="card-img-top img-fluid" src="{{ item.image.url }}" alt="{{ item.name }}">
                                 </a>
                                 {% else %}
-                                <a href="#">
+                                <a href="{% url 'product_detail' product.id %}">
                                     <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.name }}">
                                 </a>
                                 {% endif %}
