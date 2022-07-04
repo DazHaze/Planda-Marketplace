@@ -42,7 +42,7 @@
     {% block extra_js %}
     {% endblock %}
 
-    <title>Boutique Ado {% block extra_title %}{% endblock %}</title>
+    <title>Planda {% block extra_title %}{% endblock %}</title>
 </head>
 
 <body>
@@ -114,9 +114,8 @@
             </div>
             <div id="delivery-banner" class="row text-center">
                 <div class="col text-white">
-                    <h4 class="logo-font my-1">Free Delivery All This Month! <i class="fas fa-truck"></i>Free Delivery
-                        All This Month! <i class="fas fa-truck"></i>Free Delivery All This Month! <i
-                            class="fas fa-truck"></i>Free Delivery All This Month! <i class="fas fa-truck"></i></h4>
+                    <h4 class="logo-font my-1">Free Delivery on orders over €{{ free_delivery_threshold }}! <i class="fas fa-truck"></i>Free Delivery on orders over €{{ free_delivery_threshold }}! <i class="fas fa-truck"></i>Free Delivery on orders over €{{ free_delivery_threshold }}! <i
+                            class="fas fa-truck"></i>Free Delivery on orders over €{{ free_delivery_threshold }}! <i class="fas fa-truck"></i></h4>
                 </div>
             </div>
 
@@ -150,35 +149,20 @@
 
         <!-- Footer -->
         <footer class="text-center text-white">
-            <!-- Grid container -->
             <div class="container p-4">
-                <!-- Section: Social media -->
                 <section class="mb-4">
-                    <!-- Facebook -->
-                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
-                            class="fab fa-facebook-f"></i></a>
-
-                    <!-- Twitter -->
-                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
-                            class="fab fa-twitter"></i></a>
-
-                    <!-- Google -->
-                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
-                            class="fab fa-google"></i></a>
-
                     <!-- Instagram -->
-                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                    <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/darragh__hayes/?hl=en" role="button"><i
                             class="fab fa-instagram"></i></a>
 
                     <!-- Linkedin -->
-                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                    <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/darragh-hayes-dev/" role="button"><i
                             class="fab fa-linkedin-in"></i></a>
 
                     <!-- Github -->
-                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                    <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/DazHaze" role="button"><i
                             class="fab fa-github"></i></a>
                 </section>
-                <!-- Section: Social media -->
 
                 <!-- Section: Form -->
                 <section class="">
