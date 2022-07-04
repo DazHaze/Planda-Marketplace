@@ -54,6 +54,10 @@ footer{
     color: black;
 }
 
+.text-white{
+    color: white !important;
+}
+
 .subscribe-btn{
     background-color: var(--dark-secondary-pink);
     border-radius: 0.5rem !important;
