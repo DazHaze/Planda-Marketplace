@@ -14,13 +14,13 @@
 
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-white mr-5 secondary-nav-heading" href="#" id="clothing-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Outdoor
+                Plants
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a href="#" class="dropdown-item">Small Plants</a>
-                <a href="{% url 'products' %}?category=jeans" class="dropdown-item">Shrubs</a>
-                <a href="#" class="dropdown-item">Trees</a>
-                <a href="#" class="dropdown-item">All Outdoor</a>
+                <a href="{% url 'products' %}?category=small_plants" class="dropdown-item">Small Plants</a>
+                <a href="{% url 'products' %}?category=shrubs" class="dropdown-item">Shrubs</a>
+                <a href="{% url 'products' %}?category=trees" class="dropdown-item">Trees</a>
+                <a href="{% url 'products' %}?category=trees,schrubs,small_plants" class="dropdown-item">All Plants</a>
             </div>
         </li>
 
@@ -29,9 +29,9 @@
                 Equipment
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
-                <a href="#" class="dropdown-item">Tools</a>
-                <a href="#" class="dropdown-item">Pots</a>
-                <a href="#" class="dropdown-item">All Equipment</a>
+                <a href="{% url 'products' %}?category=tools" class="dropdown-item">Tools</a>
+                <a href="{% url 'products' %}?category=pots" class="dropdown-item">Pots</a>
+                <a href="{% url 'products' %}?category=tools,pots" class="dropdown-item">All Equipment</a>
             </div>
         </li>
 
