@@ -51,7 +51,7 @@
             <nav class="navbar main-nav navbar-expand-lg navbar-dark bg-dark">
                 <a class="navbar-brand flex-grow-1 logo-font" href="{% url 'home' %}">Planda</a>
                 <div class="flex-grow-1 d-flex">
-                    <form class="form-inline flex-nowrap bg-light mx-0 mx-lg-auto rounded p-1" method="GET" action="{url 'products'}">
+                    <form class="form-inline flex-nowrap bg-light mx-0 mx-lg-auto rounded p-1" method="GET" action="{% url 'products' %}">
                         <input class="form-control mr-sm-2 main-search" type="text" name="q" placeholder="Search"
                             aria-label="Search">
                         <button class="btn main-search-btn" type="submit">Search</button>
